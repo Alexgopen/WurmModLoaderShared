@@ -134,7 +134,8 @@ public abstract class ModLoaderShared<T extends Versioned> implements Versioned 
 		Set<String> provided = new LinkedHashSet<>();
 		provided.add(modLoaderProvided);
 		
-		String steamVersion = getGameVersion();
+		// 1.0.0.0 for WU2015
+		String steamVersion = "1.0.0.0";//getGameVersion();
 		provided.add("wurmunlimited@" + steamVersion);
 		logger.info(String.format("Game version %1$s", steamVersion));
 		
